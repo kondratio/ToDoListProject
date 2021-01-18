@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Todo List</title>
+</head>
+
+<body>
+	<div class="container" style="min-width: 290px;">
+		<div class="form-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="card col-md-7 mx-auto">
+						<div class="card-body">
+							<h5 class="card-title">Добавить новую задачу</h5>
+							<form name="addTask" novalidate>
+								<input type="text" name="title" id="title" class="form-control" placeholder="Тема"
+									required />
+								<div class="invalid-feedback">
+									Не указана тема
+								</div>
+								<input type="text" name="body" id="body" class="form-control mt-3"
+									placeholder="Содержание" required />
+								<div class="invalid-feedback">
+									Не указано содержание
+								</div>
+								<button type="submit" class="btn btn-warning mt-4">
+									Добавить
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-2 mb-2">
+			<ul class="category nav nav-pills  justify-content-center" id="myTab" role="tablist">
+				<li class="nav-item  active">
+					<a class="nav-link active" data-category="uncompleted" data-toggle="tab" href="#alltasks"
+						role="tab">Незавершенные
+						задачи</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link " data-category="completed" data-toggle="tab" href="#alltasks"
+						role="tab">Завершенные задачи</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-category="all" data-toggle="tab" href="#alltasks" role="tab">Все задачи</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="tasks-list-section mb-4 col-md-10 mx-auto p-0">
+			<div class="container p-0">
+				<div class="tab-content">
+					<ul class="tab-pane fade list-group list-group-flush active show" id="alltasks">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
